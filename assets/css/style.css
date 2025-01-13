@@ -512,6 +512,12 @@ section .container {
   background: #09203a;
   transition: ease-in-out 0.3s;
 }
+.project-image {
+  width: 300px; /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  object-fit: cover; /* Ensures the image fills the specified dimensions while maintaining aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+}
 
 
 .interests .icon-box i {
