@@ -1,13 +1,4 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -515,8 +506,9 @@ section .container {
 .project-image {
   width: 300px; /* Set the desired width */
   height: 300px; /* Set the desired height */
-  object-fit: cover; /* Ensures the image fills the specified dimensions while maintaining aspect ratio */
-  border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+  object-fit: contain; /* Ensures the entire image is visible, maintaining aspect ratio */
+  background-color: #fff; /* Optional: Adds a background color for images with transparency */
+  border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
 
