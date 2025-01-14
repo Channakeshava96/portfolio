@@ -30,7 +30,7 @@ const contactSchema = new mongoose.Schema({
 });
 
 // Create a model for the contact form submissions
-const Contact = mongoose.model('Contact', contactSchema);
+const client = mongoose.model('Contact', contactSchema);
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
@@ -41,7 +41,7 @@ app.post('/submit', async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   // Save form data in MongoDB
-  const newContact = new Contact({
+  const newClient = new client({
     name,
     email,
     subject,
@@ -49,7 +49,7 @@ app.post('/submit', async (req, res) => {
   });
 
   try {
-    await newContact.save(); // Save the data to MongoDB
+    await newClient.save(); // Save the data to MongoDB
     res.status(200).send('Form data submitted successfully');
   } catch (err) {
     res.status(500).send('Error saving data to MongoDB: ' + err);
